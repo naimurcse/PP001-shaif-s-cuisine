@@ -53,4 +53,85 @@
 .nav__list li:hover .nav__link {
     color: var(--green-1);
 }
+
+@media only screen and (max-width: 768px) {
+    .nav {
+        background-color: red;
+    }
+
+    .nav__icon {
+        display: block;
+    }
+
+    .nav__icon svg,
+    .nav__close svg {
+        width: 30px;
+        height: 30px;
+        pointer-events: none;
+    }
+
+    .nav__close {
+        display: block;
+        color: var(--black-1);
+        cursor: pointer;
+
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+    }
+
+    .nav__list {
+        background-color: var(--lightGreen-1);
+        z-index: 1000;
+
+        position: absolute;
+        top: 0;
+        left: 100%;
+        width: 80%;
+        height: 100vh;
+
+        transform: translateX(0);
+        transition: 0.3s ease-in transform;
+        overflow: hidden;
+
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+
+        padding-right: 2rem;
+    }
+
+    .nav__list.show {
+        transform: translateX(-100%);
+    }
+    .nav__list__wrapper {
+        background-color: aqua;
+    }
+
+    .nav__list li {
+        display: block;
+        text-align: end;
+        margin-bottom: 2rem;
+    }
+
+    .nav__list .nav__link {
+        font-size: 1.6rem;
+    }
+
+    .nav__bgOverlay {
+        background-color: rgba(0, 0, 0, 0.642);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        display: block;
+        z-index: 999;
+
+        display: none;
+    }
+    .nav__bgOverlay.active {
+        display: block;
+    }
+}
 /* Nav Section End */
