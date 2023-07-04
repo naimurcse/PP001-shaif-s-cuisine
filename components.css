@@ -1,0 +1,56 @@
+/* Global Button Style */
+/* Small Button */
+.btn {
+    color: var(--green-1);
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    border-radius: 8px;
+    font-size: 1.4rem;
+    padding: 1.2rem 2rem;
+}
+
+.primary-btn {
+    color: var(--white-1);
+    background-color: var(--green-1);
+}
+
+/* Larger than mobile devices */
+@media only screen and (min-width: 768px) {
+    .btn {
+        padding: 1.3rem 2rem;
+        font-size: 2rem;
+    }
+}
+
+/* Nav Section Start */
+.nav {
+    padding: 2rem 0;
+    /* border: 1px solid red; */
+}
+
+.nav__icon,
+.nav__close,
+.nav__bgOverlay {
+    display: none;
+}
+
+.nav__wrapper {
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+}
+
+.nav__list li {
+    display: inline-block;
+    margin: 0 1rem;
+}
+.nav__list .nav__link {
+    font-size: 1.8rem;
+    font-family: "Poppins", sans-serif;
+    color: var(--black-2);
+    padding: 0.5rem;
+}
+.nav__list li:hover .nav__link {
+    color: var(--green-1);
+}
+/* Nav Section End */
